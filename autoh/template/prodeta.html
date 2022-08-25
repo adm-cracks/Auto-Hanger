@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/prodeta.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="main1">
+            <label>MOTO HANGER</label>
+            <div class="menu">
+                <a href="#cond">Condact</a>
+                <a href="login.html">Login</a>
+                <a href="mech.html">Home</a></div>
+        </div>
+        <div class="main2">
+            <center>
+                <div class="prodeta">
+                    <p class="b">
+                        mahindara
+                    </p>
+                    <div class="propic">
+                        <img src="{% static 'img/fuelfill.jpg' %}">
+                        <h3>Fuel Fileter </h3>
+                    </div>
+                    <div class="deta">
+
+                        <p>mahindara original fuelpumnb yhgy jgfyk uitjjk utujkjy ut reff refgrgfr regrgr4g erfe4wfergfr3 </p>
+                        <p class="desc">Pack of One : Rs 150/-
+                        </p>
+                        <input type="number" oninput="che(this.value)" id="nu" name="num" value="1" placeholder="1">
+                        <button id="cheout">Checkout</button>
+                    </div>
+
+                    <!--<button class="button" id="cheout" disabled>Checkout</button>-->
+                </div>
+            </center>
+
+            <div class="contact" id="cond">
+
+                <div class="time">
+                    <p>24*7 <br><label>Avalible</label></p>
+
+
+                    <p>1 year<br><label>Waranty</label> </p>
+                    <p>20 day <br><label> Return policy</label></p>
+                    <p>Free <br><label> Delivery</label></p>
+                </div>
+                <div class="con">
+                    <center>
+                        <h3>Address Line</h3>
+                    </center>
+                    <p>3rd Floor, Management Building, Vidyavihar Campus,<br> Vidyavihar Mumbai,Maharashtra 421201<br>LandLine : 07232,091-2141<br> Mobile : 7215483612</p>
+                </div>
+                <center>
+                    <div class="soci-media">
+
+                        <a href="#" class="fa fa-facebook" style="font-size:40px;"></a>
+                        <a href="#" class="fa fa-twitter" style="font-size:40px;"></a>
+                        <a href="#" class="fa fa-envelope" style="font-size:40px;"></a>
+                        <a href="#" class="fa fa-instagram" style="font-size:40px;"></a>
+                        <a href="#" class="fa fa-whatsapp" style="font-size:40px;"></a>
+                        <a href="#" class="fa fa-youtube" style="font-size:40px;"></a>
+                        <p>Copyright © 2022 All Rights<br> Reserved By Bookozone</p>
+                    </div>
+                </center>
+                </center>
+            </div>
+        </div>
+        <script src="{% static 'js/prodeta.js' %}">
+        </script>
+</body>
+
+</html>

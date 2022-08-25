@@ -1,0 +1,270 @@
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background: url('/static/img/wp4307190.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.main {
+    width: 100%;
+    height: max-content;
+}
+
+
+/*barnd heading*/
+
+.brand {
+    width: max-content;
+    padding: 7px;
+    padding-right: 10px;
+    height: 60px;
+    margin-top: 8px;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin-left: 20px;
+}
+
+.au {
+    font-weight: bold;
+    color: blue;
+    margin-left: 1000px;
+    font-size: 20px;
+}
+
+.im {
+    width: 80px;
+    height: 70px;
+    float: left;
+}
+
+.im img {
+    width: 100%;
+    height: 100%;
+}
+
+.brand p {
+    float: left;
+    color: black;
+    font-size: 25px;
+    margin-top: 19px;
+    color: white;
+    font-weight: bold;
+    margin-left: 9px;
+    text-transform: uppercase;
+}
+
+.main1 {
+    width: 100%;
+    height: 60px;
+}
+
+
+/*menubar*/
+
+label {
+    color: yellow;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 9px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu {
+    float: right;
+    margin-right: 5px;
+    width: 320px;
+    height: max-content;
+    margin-top: 2px;
+    padding-left: 8px;
+}
+
+.menu a {
+    float: right;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: bold;
+    margin-left: 29px;
+    color: yellow;
+}
+
+.menu a:hover {
+    color: rgb(255, 196, 0);
+}
+
+.smain {
+    height: 560px;
+    width: 1250px;
+    margin-top: 30px;
+    border: 2px solid black;
+    border-radius: 14px;
+    background: linear-gradient(60deg, #cbec3b4d 0%, #ece7e780 100%);
+}
+
+.prd {
+    height: 500px;
+    width: 1160px;
+    margin-top: 2px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    white-space: nowrap;
+    border: 4px solid black;
+}
+
+ ::-webkit-scrollbar {
+    display: none;
+    scroll-behavior: smooth;
+}
+
+.pr1 {
+    float: left;
+    width: 230px;
+    height: 230px;
+    align-self: center;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.brimg {
+    width: 180px;
+    height: 180px;
+}
+
+.brimg img {
+    height: 95%;
+    width: 95%;
+}
+
+.brimg img:hover {
+    height: 100%;
+    width: 100%;
+}
+
+.brname {
+    margin-top: 9px;
+    font-size: 18px;
+}
+
+
+/*condact*/
+
+.contact {
+    width: 100%;
+    height: max-content;
+    background: transparent;
+    padding-top: 6px;
+}
+
+
+/*SOCIAL ICON*/
+
+.time {
+    float: left;
+    color: white;
+    width: 650px;
+    height: 150px;
+    font-family: 'Lato', sans-serif;
+    padding-top: 6px;
+    text-align: center;
+    margin-top: 12px;
+    margin-left: 18px;
+}
+
+.time p {
+    font-weight: bold;
+    float: left;
+    font-size: 25px;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+.time p label {
+    font-size: 25px;
+}
+
+
+/*address*/
+
+.con {
+    float: right;
+    color: white;
+    width: 550px;
+    height: 180px;
+    font-family: 'Lato', sans-serif;
+    padding-top: 6px;
+    text-align: center;
+    margin-right: 22px;
+}
+
+.con h3 {
+    margin-top: 8px;
+    color: yellow;
+    font-size: 28px;
+}
+
+.con p {
+    margin-top: -10px;
+    color: white;
+    font-size: 19px;
+    line-height: 27px;
+}
+
+.soci-media {
+    padding-top: 6px;
+    width: 600px;
+    height: 140px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    margin-left: -40px;
+    margin-top: 190px;
+}
+
+.soci-media h3 {
+    color: white;
+    font-size: 25px;
+}
+
+.soci-media p {
+    color: white;
+    font-size: 17px;
+    line-height: 27px;
+    margin-left: 210px;
+    width: max-content;
+    height: fit-content;
+}
+
+.fa {
+    margin-top: 13px;
+    margin: 10px;
+    padding-left: 8px;
+    text-decoration: none;
+    margin-left: 35px;
+}
+
+.fa-facebook {
+    color: yellow;
+}
+
+.fa-twitter {
+    color: yellow;
+}
+
+.fa-youtube {
+    color: yellow;
+}
+
+.fa-instagram {
+    color: yellow;
+}
+
+.fa-whatsapp {
+    color: yellow;
+}
+
+.fa-envelope {
+    color: yellow;
+}

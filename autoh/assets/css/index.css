@@ -1,0 +1,428 @@
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+.main {
+    background: url('./img/assets/6289000.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.main1 {
+    width: 100%;
+    height: 800px;
+    background: linear-gradient(60deg, #cbec3b4d 0%, #ece7e780 100%);
+}
+
+.usname {
+    margin-left: 300px;
+    font-size: 20px;
+    color: red;
+    margin-top: 20px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+    scroll-behavior: smooth;
+}
+
+
+/*menu*/
+
+.menu {
+    width: max-content;
+    height: 40px;
+    float: right;
+    word-spacing: 28px;
+    margin-right: 20px;
+    margin-top: -90px;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.im {
+    width: 380px;
+    height: 35px;
+}
+
+.im img {
+    width: 320px;
+    height: 18px;
+    margin-top: 30px;
+}
+
+
+/*name*/
+
+.wel {
+    width: max-content;
+    height: max-content;
+    margin-left: 200px;
+    margin-top: 140px;
+}
+
+.wel h3 {
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+/*para*/
+
+.anima {
+    float: right;
+    height: 80px;
+    width: 200px;
+    color: white;
+    font-size: 60px;
+    margin-top: -85px;
+    margin-right: 100px;
+}
+
+.hh {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    margin-top: 90px;
+}
+
+.ab {
+    color: white;
+    font-size: 22px;
+}
+
+
+/* Animation */
+
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+
+/*Shrinking for mobile*/
+
+@media (max-width: 768px) {
+    .waves {
+        height: 40v;
+        min-height: 40px;
+    }
+    .content {
+        height: 30vh;
+    }
+    h1 {
+        font-size: 80px;
+    }
+}
+
+.animated {
+    position: relative;
+}
+
+.animated-info {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 220px;
+    position: relative;
+    font-family: 'Lato', sans-serif;
+}
+
+.animated-item {
+    display: block;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    font-size: 60px;
+    top: 0;
+    right: 0;
+    left: 0;
+    animation: BottomTotop 6s linear infinite 0s;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.animated-item:nth-child(2n+2) {
+    animation-delay: 2s;
+}
+
+.animated-item:nth-child(3n+3) {
+    animation-delay: 4s;
+}
+
+@keyframes BottomTotop {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    25% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    30% {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/*second*/
+
+.submain {
+    width: 100vw;
+    height: 60px;
+    overflow-x: hidden;
+    background-color: white;
+}
+
+
+/*anima*/
+
+@keyframes moveRight {
+    100% {
+        transform: translateX(-2950px);
+    }
+}
+
+@keyframes shock {
+    100% {
+        transform: translateY(-1px);
+    }
+    50% {
+        transform: translateY(2px);
+    }
+    0% {
+        transform: translateY(-1px);
+    }
+}
+
+.main2 {
+    margin-top: -4px;
+    width: 100vw;
+    height: max-content;
+    background: url('./img/assets/2010_ferrari_458_italia_wheel-wallpaper-2400x1350.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+
+/*brand name*/
+
+.main2 h2 {
+    font-size: 40px;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+/*barnd div*/
+
+.main21 {
+    background: linear-gradient(60deg, #cbec3b4d 0%, #ece7e780 100%);
+}
+
+.brand-name {
+    margin-left: 12px;
+    width: 1320px;
+    height: max-content;
+    overflow: hidden;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.b-n {
+    background: linear-gradient(60deg, #DBE2F7 0%, #d7a6a68c 100%);
+    float: left;
+    margin: 4px;
+    width: 245px;
+    height: 230px;
+    align-self: center;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+.brimg {
+    width: 200px;
+    height: 160px;
+}
+
+.brimg img {
+    height: 100%;
+    width: 100%;
+}
+
+.brname {
+    font-size: 26px;
+}
+
+
+/*condact*/
+
+.main3 {
+    margin-top: -4px;
+    width: 100vw;
+    height: max-content;
+    background: url('./img/assets/360_F_329417849_wrZHmLUhjkrADsbTH9DNWh5sqe5Tvawh.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.contact {
+    width: 100%;
+    height: max-content;
+    background: transparent;
+    padding-top: 6px;
+}
+
+
+/*SOCIAL ICON*/
+
+.time {
+    color: white;
+    width: 1200px;
+    height: 150px;
+    font-family: 'Lato', sans-serif;
+    padding-top: 6px;
+    text-align: center;
+}
+
+.time p {
+    font-weight: bold;
+    float: left;
+    font-size: 35px;
+    margin-left: 40px;
+    margin-right: 20px;
+}
+
+.time p img {
+    height: 60px;
+    width: 60px;
+    margin-top: -16px;
+}
+
+.time p img .time p label {
+    font-size: 30px;
+}
+
+
+/*address*/
+
+.con {
+    color: white;
+    width: 850px;
+    height: 200px;
+    font-family: 'Lato', sans-serif;
+    padding-top: 6px;
+    text-align: center;
+}
+
+.con h3 {
+    color: white;
+    font-size: 28px;
+}
+
+.con p {
+    color: white;
+    font-size: 19px;
+    line-height: 27px;
+}
+
+.soci-media {
+    padding-top: 6px;
+    width: 600px;
+    height: 180px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    margin-left: -40px;
+}
+
+.soci-media h3 {
+    color: white;
+    font-size: 25px;
+}
+
+.soci-media p {
+    color: white;
+    font-size: 17px;
+    line-height: 27px;
+    margin-left: 210px;
+    width: max-content;
+    height: fit-content;
+}
+
+.fa {
+    margin-top: 13px;
+    margin: 10px;
+    padding-left: 8px;
+    text-decoration: none;
+    margin-left: 35px;
+}
+
+.fa-facebook {
+    color: white;
+}
+
+.fa-twitter {
+    color: white;
+}
+
+.fa-youtube {
+    color: white;
+}
+
+.fa-instagram {
+    color: white;
+}
+
+.fa-whatsapp {
+    color: white;
+}

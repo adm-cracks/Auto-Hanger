@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loginpage</title>
+    <style>
+        * {
+            font-family: 'Lato', sans-serif;
+        }
+        
+        body {
+            background: url('/static/img/wp4307190.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        
+        h2 {
+            color: darkblue;
+        }
+        
+        p {
+            color: rgb(255, 80, 80);
+        }
+        
+        .loginbox {
+            margin: 30px;
+            padding: 10px;
+            width: 400px;
+            margin-top: 40px;
+            border-radius: 15px;
+            background: linear-gradient(60deg, #cbcfdb 0%, #e6d8d88c 100%);
+        }
+        
+        .loginbox input {
+            width: 200px;
+            height: 30px;
+            margin-bottom: 6px;
+            border-radius: 25px;
+            padding-left: 10px;
+            text-align: center;
+        }
+        
+        .loginbox input ::placeholder {
+            text-transform: capitalize;
+        }
+        
+        .loginbox button {
+            width: 120px;
+            height: 30px;
+            background-color: rgb(25, 172, 240);
+            border-radius: 10px;
+            padding-left: 6px;
+            margin-top: 12px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            text-transform: capitalize;
+        }
+        
+        .main {
+            width: 100%;
+            height: max-content;
+        }
+        
+        label {
+            color: yellow;
+            width: fit-content;
+            height: fit-content;
+            margin-top: 9px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .menu {
+            float: right;
+            margin-right: 5px;
+            width: 320px;
+            height: max-content;
+            margin-top: 2px;
+            padding-left: 8px;
+        }
+        
+        .menu a {
+            float: right;
+            text-decoration: none;
+            font-size: 21px;
+            font-weight: bold;
+            margin-left: 29px;
+            color: yellow;
+        }
+        
+        .menu a:hover {
+            color: rgb(255, 196, 0);
+        }
+    </style>
+</head>
+
+<div class="main">
+    <div class="main1">
+        <label>MOTO HANGER</label>
+        <div class="menu">
+
+            <a href="{% url 'log' %}">Login</a>
+            <a href="{% url 'homepage' %}">Home</a></div>
+
+        <center>
+            <form action="{% url 'reg' %}" method="post">
+                {% csrf_token %}
+                <div class="loginbox">
+
+                    <p>
+                        <font color="red">{{ms}}</font>
+                    </p>
+                    <h2>Joint With Us</h2>
+                    <input type="text" placeholder="Username" name="uname"><br><br>
+                    <input type="text" placeholder="Firstname" name="fname"><br><br>
+                    <input type="text" placeholder="Lastname" name="lname"><br><br>
+                    <input type="email" placeholder="email" name="email"><br><br>
+                    <input type="password" placeholder="password" name="p_w"><br><br>
+                    <input type="password" placeholder="Re-password" name="re-p_w"><br><br>
+                    <button type="submit">submit</button>
+
+                </div>
+            </form>
+        </center>
+    </div>
+    </body>
+
+</html>
