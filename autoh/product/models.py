@@ -13,7 +13,7 @@ class brands(models.Model):
     
     
 class parts(models.Model):
-    brand = models.ForeignKey(brands,related_name='partss',on_delete=models.CASCADE)
+    brand = models.ForeignKey(brands,related_name='partss',default=1, on_delete=models.CASCADE)
     p_name = models.CharField(max_length=100)
     p_img = models.ImageField(upload_to ='pic')
     p_deta = models.TextField()

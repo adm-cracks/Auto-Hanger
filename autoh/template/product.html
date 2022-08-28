@@ -19,94 +19,35 @@
             <label>AUTO HANGER</label>
             <div class="menu">
                 <a href="#cond">Condact</a>
-                <a href="login.html">Login</a>
-                <a href="mech.html">Home</a></div>
+
+                <a href="{% url 'homepage' %}">Home</a></div>
         </div>
 
         <div class="brand">
-            <div class="im"><img src="{% static 'img/toyota-logo.png' %}"></div>
-            <p>Mahindra</p>
+            <div class="im"><img src="{{ban.b_img.url}}"></div>
+            <p>{{ban.b_name}}</p>
         </div>
-        <p class="au">Avalible Parts Result : 21</p>
+        <p class="au">Avalible Parts Result : {{ban.partss.count}}</p>
 
 
         <center>
             <div class="smain">
                 <br>
                 <div class="prd">
+                    {% for i in ban.partss.all %}
 
                     <div class="pr1">
-
-                        <div class="brimg"><img src="{% static 'img/cluth.jpg' %}"></div>
-                        <div class="brname">cluth disk</div>
-
-                    </div>
-                    <div class="pr1">
-
-                        <div class="brimg"><img src="./img/assets/cluth.jpg"></div>
-                        <div class="brname">gghiiuh</div>
+                        <a href="prodetails?prbid={{i.id}}">
+                            <div class="brimg"><img src="{{i.p_img.url}}"></div>
+                        </a>
+                        <div class="brname">{{i.p_name}}</div>
 
                     </div>
-                    <div class="pr1">
 
-                        <div class="brimg"><img src="./img/assets/cluth.jpg"></div>
-                        <div class="brname">gghiiuh</div>
+                    {% endfor %}
 
-                    </div>
-                    <div class="pr1">
 
-                        <div class="brimg"><img src="./img/assets/cluth.jpg"></div>
-                        <div class="brname">gghiiuh</div>
 
-                    </div>
-                    <div class="pr1">
-
-                        <div class="brimg"><img src="./img/assets/cluth.jpg"></div>
-                        <div class="brname">gghiiuh</div>
-
-                    </div>
-                    <div class="pr1">
-
-                        <div class="brimg"><img src="./img/assets/fuel fillter.jpg"></div>
-                        <div class="brname">gghiiuh</div>
-
-                    </div>
-                    <div class="pr1">
-
-                        <div class="brimg"><img src="./img/assets/fuelfill.jpg"></div>
-                        <div class="brname">gghiiuh</div>
-
-                    </div>
-                    <div class="pr1">
-
-                        <div class="brimg"><img src="./img/assets/cluth cable.jpg"></div>
-                        <div class="brname">gghiiuh</div>
-
-                    </div>
-                    <div class="pr1">
-
-                        <div class="brimg"><img src="./img/assets/cluth.jpg"></div>
-                        <div class="brname">gghiiuh</div>
-
-                    </div>
-                    <div class="pr1">
-
-                        <div class="brimg"><img src="./img/assets/fuelfill.jpg"></div>
-                        <div class="brname">gghiiuh</div>
-
-                    </div>
-                    <div class="pr1">
-
-                        <div class="brimg"><img src="./img/assets/cluth cable.jpg"></div>
-                        <div class="brname">gghiiuh</div>
-
-                    </div>
-                    <div class="pr1">
-
-                        <div class="brimg"><img src="./img/assets/cluth.jpg"></div>
-                        <div class="brname">gghiiuh</div>
-
-                    </div>
 
                 </div>
         </center>

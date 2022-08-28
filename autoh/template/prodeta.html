@@ -19,26 +19,29 @@
             <label>MOTO HANGER</label>
             <div class="menu">
                 <a href="#cond">Condact</a>
-                <a href="login.html">Login</a>
-                <a href="mech.html">Home</a></div>
+
+                <a href="{% url 'homepage' %}">Home</a></div>
         </div>
         <div class="main2">
             <center>
                 <div class="prodeta">
                     <p class="b">
-                        mahindara
+                        {{pdet.brand}}
                     </p>
                     <div class="propic">
-                        <img src="{% static 'img/fuelfill.jpg' %}">
-                        <h3>Fuel Fileter </h3>
+                        <img src="{{pdet.p_img.url}}">
+                        <h3>{{pdet.p_name}} </h3>
                     </div>
                     <div class="deta">
 
-                        <p>mahindara original fuelpumnb yhgy jgfyk uitjjk utujkjy ut reff refgrgfr regrgr4g erfe4wfergfr3 </p>
-                        <p class="desc">Pack of One : Rs 150/-
+                        <p>{{pdet.p_deta}} </p>
+                        <p class="desc">Pack of One : Rs {{pdet.p_price}} /-
                         </p>
-                        <input type="number" oninput="che(this.value)" id="nu" name="num" value="1" placeholder="1">
-                        <button id="cheout">Checkout</button>
+                        <form action="{% url 'bil' %}">
+                            <input type="hidden" name="price" value="{{pdet.p_price}}">
+                            <input type="hidden" name="product" value="{{pdet.id}}">
+                            <input type="number" oninput="che(this.value)" id="nu" name="num" min="0" value="1" placeholder="1">
+                            <button id="cheout">Checkout</button></form>
                     </div>
 
                     <!--<button class="button" id="cheout" disabled>Checkout</button>-->

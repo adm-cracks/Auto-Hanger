@@ -18,9 +18,9 @@
         <div class="main1">
             <label>MOTO HANGER</label>
             <div class="menu">
-                <a href="#">Condact</a>
-                <a href="#">Login</a>
-                <a href="#">Home</a></div>
+                <a href="#cond">Condact</a>
+
+                <a href="{% url 'homepage' %}">Home</a></div>
         </div>
         <div class="main2">
             <center>
@@ -29,18 +29,18 @@
                     <div class="bill">
 
 
-                        <p class="dat">23-08-2022</p>
-                        <p class="ti">02:11pm</p>
+                        <p class="dat">{{d1}}</p>
+                        <p class="ti">{{ti}}</p>
                         <center>
                             <br>
                             <h3>Bill Details</h3>
                         </center>
-                        <div class="im"><img src="{% static 'img/cluth cable.jpg' %}">
+                        <div class="im"><img src="{{pan.p_img.url}}">
 
                         </div>
 
-                        <div class="br"><img src="{% static 'img/benz.png' %}">
-                            <p>mitsubishi</p>
+                        <div class="br"><img src="{{pan.brand.b_img.url}}">
+                            <p>{{pan.brand.b_name}}</p>
                         </div>
                         <table border="3" cellpadding="3">
                             <tr>
@@ -55,27 +55,24 @@
 
                             <tr class="tr2" style="height: 150px;">
                                 <td>1</td>
-                                <td>adarsh</td>
-                                <td>fuelfilter</td>
-                                <td>Mahindra</td>
-                                <td>1</td>
-                                <td>Rs 1250</td>
+                                <td>{{user.username}}</td>
+                                <td>{{pan.p_name}}</td>
+                                <td>{{pan.brand}}</td>
+                                <td>{{q}}</td>
+                                <td>Rs {{pan.p_price}}</td>
                                 <td>Free</td>
                             </tr>
                             <tr style="height: 50px;">
 
                                 <td colspan="4">Total Price </td>
-                                <td>1</td>
-                                <td>250</td>
-                                <td>250/-</td>
+                                <td>{{q}}</td>
+                                <td>{{pan.p_price}}</td>
+                                <td>{{tot}} /-</td>
                             </tr>
 
                         </table>
                         <p class="end">Thakyou joint with Us<br>Terams & conditions apply</p>
-                        <!--<p class="p">Products &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;: &nbsp; &nbsp; &nbsp;</p>
-                        <div class="im"><img src="./img/assets/fuelfill.jpg"></div>
-                        <p class="u">UserName &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;: &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;adarsh</p>
-                        <p class="bd">Brand &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;: &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Mahindra</p>-->
+
                     </div>
 
 
@@ -83,7 +80,7 @@
 
                 </div>
 
-                <!--<button class="button" id="cheout" disabled>Checkout</button>-->
+
         </div>
         </center>
 

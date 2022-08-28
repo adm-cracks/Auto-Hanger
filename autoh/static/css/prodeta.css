@@ -74,6 +74,7 @@ label {
 .b {
     margin-left: -600px;
     font-size: 21px;
+    text-transform: capitalize;
 }
 
 .propic {
@@ -106,7 +107,7 @@ label {
 }
 
 .deta p {
-    font-size: 20px;
+    font-size: 18px;
     margin-left: 15px;
 }
 

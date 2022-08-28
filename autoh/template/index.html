@@ -79,7 +79,9 @@
                                 <figcaption class="d-flex align-items-center justify-content-center">
 
                                     <h2 style="color: white;  text-transform: uppercase;">{{i.b_name}}</h2>
-                                    <a href="product/?cat={{i.b_name}}">View more</a>
+                                    {% if user.is_authenticated %}
+                                    <a href="product/?cat={{i.id}}">View more</a> {% else %}
+                                    <a href="{% url 'log' %}">View more</a> {% endif %}
                                 </figcaption>
                             </figure>
 
