@@ -5,7 +5,6 @@ from .models import parts
 
 def proindex(request):
     part =  request.GET['cat']
-    print("part :",part)
     #b_parts = parts.objects.filter(brand=part)
     #print(b_parts)
     ban = brands.objects.get(id=part)
@@ -14,7 +13,6 @@ def proindex(request):
 
 def prodeta(request):
     pd = request.GET['prbid']
-    print("parts details",pd)
     pro_deta = parts.objects.get(id=pd)
     return render(request,'prodeta.html',{'pdet':pro_deta})
 
@@ -22,13 +20,9 @@ def prodeta(request):
 def billed(request):
     qua = int(request.GET['num'])
     price = float(request.GET['price'])
-    prod = request.GET['product']
-   
-    print(qua,price,prod)
-    print("type",type(qua),type(price))
+    prod = request.GET['product'] 
     total = price * qua
     total = int(total)
-    print(total)
     pan = parts.objects.get(id=prod)
     #date
     from datetime import date,datetime

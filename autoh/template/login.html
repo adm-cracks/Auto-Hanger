@@ -121,26 +121,61 @@
         </div>
 
 
-
-
-
-
         <center>
-            <form action="{% url 'log' %}" method="post">
+            <form method="post">
                 {% csrf_token %}
                 <div class="loginbox">
                     <p>
-                        <font color="red">{{lng}}</font>
+                        <font color="red" id="msg"></font>
                     </p>
                     <h2>Back To Garage</h2><br>
-                    <input type="text" placeholder="Username" name="us_name" required><br><br>
-                    <input type="password" placeholder="password" name="p_w" required><br><br>
-                    <button type="submit">Sign</button> <br>Don't have an account <a href="{% url 'reg' %}">Sign-up</a>
+                    <input type="text" placeholder="Username" name="us_name" id="un"><br><br>
+                    <input type="password" placeholder="password" name="p_w" id="pa"><br><br>
+                    <button type="button" id="btn">Sign</button> <br>Don't have an account <a href="{% url 'reg' %}">Sign-up</a>
                 </div>
 
             </form>
         </center>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $('#btn').click(() => {
+            var Username = $('#un').val()
+            var password = $('#pa').val()
+            var data = {
+                'csrfmiddlewaretoken': '{{csrf_token}}',
+                'us_name': Username,
+                'p_w': password,
+            }
+            if (Username == '') {
+                $('#msg').html('Username Field Empty')
+            } else if (password == '') {
+                $('#msg').html('Password Field Empty')
+            } else {
+                $.ajax({
+                    url: "{% url 'log' %}",
+                    method: 'POST',
+                    data: data,
+                    dataType: 'json',
+                    success: function(data) {
+                        if (data.success) {
+                            window.location.replace('/')
+                        } else {
+                            $('#msg').html('Invalid user or password')
+                        }
+                    }
+                })
+            }
+        })
+    </script>
+    <script>
+        window.addEventListener("online", function() {
+            alert("You are online ")
+        })
+        window.addEventListener("offline", function() {
+            alert("Your are Offline")
+        })
+    </script>
 </body>
 
 </html>

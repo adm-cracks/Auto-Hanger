@@ -8,12 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'css/bill.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
     <title>Document</title>
 </head>
 
 <body>
-
+    <div class="preloader" id="load"></div>
     <div class="main">
         <div class="main1">
             <label>MOTO HANGER</label>
@@ -23,22 +23,21 @@
                 <a href="{% url 'homepage' %}">Home</a></div>
         </div>
         <div class="main2">
+            <!--<div class="download">
+
+                <button class="btn" id="download"><i class="fa fa-download" aria-hidden="true" style="margin-left:-10px;"></i>Download invoice</i></button>
+            </div>-->
             <center>
-                <div class="prodeta">
-
-                    <div class="bill">
-
-
+                <div class="prodeta" id="de">
+                    <div class="bill" id="billing">
                         <p class="dat">{{d1}}</p>
                         <p class="ti">{{ti}}</p>
                         <center>
                             <br>
-                            <h3>Bill Details</h3>
+                            <h3>INVOICE</h3>
                         </center>
                         <div class="im"><img src="{{pan.p_img.url}}">
-
                         </div>
-
                         <div class="br"><img src="{{pan.brand.b_img.url}}">
                             <p>{{pan.brand.b_name}}</p>
                         </div>
@@ -52,7 +51,6 @@
                                 <th>MRP </th>
                                 <th>Delivery </th>
                             </tr>
-
                             <tr class="tr2" style="height: 150px;">
                                 <td>1</td>
                                 <td>{{user.username}}</td>
@@ -63,33 +61,21 @@
                                 <td>Free</td>
                             </tr>
                             <tr style="height: 50px;">
-
                                 <td colspan="4">Total Price </td>
                                 <td>{{q}}</td>
                                 <td>{{pan.p_price}}</td>
-                                <td>{{tot}} /-</td>
+                                <td>₹ {{tot}}/-</td>
                             </tr>
-
                         </table>
                         <p class="end">Thakyou joint with Us<br>Terams & conditions apply</p>
-
                     </div>
-
-
-
-
                 </div>
-
-
         </div>
         </center>
 
         <div class="contact" id="cond">
-
             <div class="time">
                 <p>24*7 <br><label>Avalible</label></p>
-
-
                 <p>1 year<br><label>Waranty</label> </p>
                 <p>20 day <br><label> Return policy</label></p>
                 <p>Free <br><label> Delivery</label></p>
@@ -102,7 +88,6 @@
             </div>
             <center>
                 <div class="soci-media">
-
                     <a href="#" class="fa fa-facebook" style="font-size:40px;"></a>
                     <a href="#" class="fa fa-twitter" style="font-size:40px;"></a>
                     <a href="#" class="fa fa-envelope" style="font-size:40px;"></a>
@@ -115,7 +100,48 @@
             </center>
         </div>
     </div>
-    <script src="./prodeta.js">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        setTimeout(function() {
+            $('.preloader').fadeToggle();
+        }, 3000)
+    </script>
+    <script>
+        window.addEventListener("online", function() {
+            alert("You are online ")
+        })
+        window.addEventListener("offline", function() {
+            alert("Your are Offline")
+        })
+    </script>
+    <script>
+        window.onload = function() {
+            document.getElementById("download")
+                .addEventListener("click", () => {
+                    const invoice = this.document.getElementById("billing");
+                    console.log(invoice);
+                    console.log(window);
+                    var opt = {
+                        margin: 1,
+                        filename: 'invoice.pdf',
+                        image: {
+                            type: 'jpeg',
+                            quality: 0.98
+                        },
+                        html2canvas: {
+                            scale: 2
+                        },
+                        jsPDF: {
+                            unit: 'in',
+                            format: 'letter',
+                            orientation: 'landscape'
+                        }
+                    };
+                    html2pdf().from(invoice).set(opt).save();
+                })
+        }
     </script>
 </body>
 

@@ -1,28 +1,31 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.models import auth,User
 from product.models import brands
+from django.http.response import JsonResponse
 
 # Create your views here.
 
 def index(request):
     b_cat =  brands.objects.all()
-    print(b_cat)
-    for i in b_cat:
-        print(i.b_name)
     return render(request,"index.html",{'pro':b_cat})
 
 def login(request):
-    print('hellow')
     if request.method == "POST":
         user = request.POST['us_name']
         pas_d = request.POST['p_w']
         valid = auth.authenticate(username = user,password = pas_d)
         if valid is not None:
             auth.login(request,valid) 
-            return redirect('/')
+            return JsonResponse(
+                {'success' : True},
+                safe= False
+            )
         else:
-            msg = 'Check Username or Password'
-            return render(request,'login.html',{'lng': msg})    
+            
+            return JsonResponse(
+                {'success' : False},
+                safe= False
+            )  
     else:
         return render(request,'login.html')
 

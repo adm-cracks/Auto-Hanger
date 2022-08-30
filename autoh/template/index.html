@@ -16,12 +16,13 @@
 </head>
 
 <body>
+    <div class="preloader" id="load"></div>
     <div class="main">
         <div class="main1">
             <div class="im"><img src="{% static 'img/faster-one.regular-removebg-preview.png' %}">
             </div>
             {% if user.is_authenticated %}
-            <p class="usname">Hai, {{user.username}}</p>
+            <p class="usname">Welcome, {{user.username}}</p>
             {% else %}
             <p class="usname">Hai wellcome</p> {% endif %}
             <div class="menu">
@@ -123,12 +124,27 @@
                         <a href="#" class="fa fa-instagram" style="font-size:40px;"></a>
                         <a href="#" class="fa fa-whatsapp" style="font-size:40px;"></a>
                         <a href="#" class="fa fa-youtube" style="font-size:40px;"></a>
-                        <p>Copyright © 2022 All Rights<br> Reserved By Bookozone</p>
+                        <p>Copyright © 2022 All Rights<br> Reserved By AutoHangeR</p>
                     </div>
                 </center>
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        setTimeout(function() {
+            $('.preloader').fadeToggle();
+        }, 1900)
+    </script>
+    <script>
+        window.addEventListener("online", function() {
+            alert("You are online ")
+        })
+        window.addEventListener("offline", function() {
+            alert("Your are Offline")
+        })
+    </script>
 </body>
 
 </html>

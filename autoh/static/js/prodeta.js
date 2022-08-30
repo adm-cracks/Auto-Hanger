@@ -1,7 +1,8 @@
 function che(x) {
 
     if (x <= 0) {
-        alert("Plese Select minium 1 quatity")
+        var s = 'Plese Select minium 1 quatity'
+        document.getElementById("ms").innerHTML = s;
         document.getElementById("cheout").disabled = true;
         var con = document.getElementById("cheout");
         con.style.backgroundColor = "whitesmoke";
@@ -14,6 +15,9 @@ function che(x) {
         con.style.backgroundColor = "royalblue";
         con.style.color = "white";
         con.style.cursor = "pointer";
+        var s = 'Plese Select minium 1 quatity'
+
+        document.getElementById("ms").innerHTML = '';
 
     }
 }

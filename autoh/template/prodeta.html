@@ -37,10 +37,13 @@
                         <p>{{pdet.p_deta}} </p>
                         <p class="desc">Pack of One : Rs {{pdet.p_price}} /-
                         </p>
+                        <div class="ms">
+                            <p class="msg" id="ms"></p>
+                        </div>
                         <form action="{% url 'bil' %}">
                             <input type="hidden" name="price" value="{{pdet.p_price}}">
                             <input type="hidden" name="product" value="{{pdet.id}}">
-                            <input type="number" oninput="che(this.value)" id="nu" name="num" min="0" value="1" placeholder="1">
+                            <input type="number" oninput="che(this.value)" id="nu" name="num" min="0" max="8" value="1" placeholder="1">
                             <button id="cheout">Checkout</button></form>
                     </div>
 
@@ -80,6 +83,14 @@
             </div>
         </div>
         <script src="{% static 'js/prodeta.js' %}">
+        </script>
+        <script>
+            window.addEventListener("online", function() {
+                alert("You are online ")
+            })
+            window.addEventListener("offline", function() {
+                alert("Your are Offline")
+            })
         </script>
 </body>
 

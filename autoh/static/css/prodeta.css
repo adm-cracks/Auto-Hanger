@@ -118,7 +118,7 @@ label {
     margin-left: 60px;
     font-weight: bold;
     font-size: 18px;
-    margin-top: 45px;
+    margin-top: 10px;
 }
 
 .desc {
@@ -127,14 +127,24 @@ label {
     margin-left: 35px;
     color: black;
     font-weight: bold;
-    margin-top: 52px;
+    margin-top: 46px;
+}
+
+.ms {
+    margin-left: 30px;
+    width: 400px;
+    height: 25px;
+}
+
+.msg {
+    color: red;
 }
 
 .deta button {
     float: right;
     padding: 7px;
-    margin-top: 45px;
-    margin-right: 200px;
+    margin-top: 10px;
+    margin-right: 300px;
     font-weight: bold;
     background-color: royalblue;
     width: 100px;

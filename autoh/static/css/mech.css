@@ -11,7 +11,7 @@
 
 .main1 {
     width: 100%;
-    height: 800px;
+    height: 700px;
     background: linear-gradient(60deg, #cbec3b4d 0%, #ece7e780 100%);
 }
 
@@ -88,7 +88,7 @@
     font-size: 26px;
     color: white;
     font-weight: bold;
-    margin-top: 90px;
+    margin-top: 130px;
 }
 
 .ab {
@@ -310,10 +310,7 @@
     margin-top: -4px;
     width: 100vw;
     height: max-content;
-    background: url('/static/img/360_F_329417849_wrZHmLUhjkrADsbTH9DNWh5sqe5Tvawh.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
+    background-color: #000;
 }
 
 .contact {
@@ -328,17 +325,19 @@
 
 .time {
     color: white;
-    width: 1200px;
-    height: 150px;
+    width: 900px;
+    height: 130px;
     font-family: 'Lato', sans-serif;
     padding-top: 6px;
     text-align: center;
+    margin-top: 18px;
+    background-color: #000;
 }
 
 .time p {
     font-weight: bold;
     float: left;
-    font-size: 35px;
+    font-size: 22px;
     margin-left: 40px;
     margin-right: 20px;
 }
@@ -350,7 +349,7 @@
 }
 
 .time p img .time p label {
-    font-size: 30px;
+    font-size: 26px;
 }
 
 
@@ -359,30 +358,33 @@
 .con {
     color: white;
     width: 850px;
-    height: 200px;
+    height: 160px;
     font-family: 'Lato', sans-serif;
     padding-top: 6px;
     text-align: center;
+    background-color: #000;
 }
 
 .con h3 {
     color: white;
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .con p {
     color: white;
-    font-size: 19px;
+    font-size: 14px;
     line-height: 27px;
 }
 
 .soci-media {
     padding-top: 6px;
     width: 600px;
-    height: 180px;
+    height: 130px;
     text-align: center;
     font-family: 'Lato', sans-serif;
     margin-left: -40px;
+    background-color: #000;
+    margin-top: -30px;
 }
 
 .soci-media h3 {
@@ -437,4 +439,16 @@
 
 .fa-whatsapp:hover {
     color: green;
+}
+
+
+/*preloader*/
+
+.preloader {
+    background: #000 url('/static/img/b1d019e9c4352865d2963efac66d0c87.gif') no-repeat center center;
+    background-size: 30%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
 }
