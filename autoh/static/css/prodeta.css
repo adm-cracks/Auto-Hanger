@@ -74,7 +74,7 @@ label {
 .b {
     margin-left: -600px;
     font-size: 21px;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 .propic {
